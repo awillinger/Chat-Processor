@@ -213,7 +213,7 @@ public Action OnSayText2(UserMsg msg_id, BfRead msg, const int[] players, int pl
 	bool bAllChat = StrContains(sFlag, "_All") != -1;
 	int iDeadTalk = GetConVarInt(FindConVar("sm_deadtalk"));
 
-	for (int i = 1; i < MaxClients; i++)
+	for (int i = 1; i <= MaxClients; i++)
 	{
 		if (!IsClientInGame(i) || IsFakeClient(i))
 		{
