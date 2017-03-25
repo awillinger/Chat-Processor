@@ -158,7 +158,7 @@ public Action OnSayText2(UserMsg msg_id, BfRead msg, const int[] players, int pl
 	{
 		return Plugin_Continue;
 	}
-		
+	
 	//Stops double messages in-general.
 	if (bNewMsg[iSender])
 	{
@@ -166,7 +166,10 @@ public Action OnSayText2(UserMsg msg_id, BfRead msg, const int[] players, int pl
 	}
 	else
 	{
-		return Plugin_Stop;
+		if(reliable)
+		{
+			return Plugin_Stop;
+		}
 	}
 	
 	//Chat Type
